@@ -180,7 +180,7 @@ def llm_assess_and_prompt(unit: Unit) -> Dict[str, str]:
 
 # ===== API Endpoint =====
 @app.post("/assess-2378796")
-def assess_note_2378796(units: List[Unit]) -> List[Dict[str, Any]]:
+async def assess_note_2378796(units: List[Unit]) -> List[Dict[str, Any]]:
     out: List[Dict[str, Any]] = []
     for u in units:
         if u.code:
